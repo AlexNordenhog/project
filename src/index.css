@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 173 80% 40%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply max-w-screen-2xl mx-auto p-4 md:p-6;
+  }
+
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight md:text-3xl;
+  }
+
+  .section-title {
+    @apply text-xl font-medium tracking-tight;
+  }
+
+  .card {
+    @apply rounded-lg border bg-card shadow-sm transition-all duration-200;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply bg-accent-600 text-white hover:bg-accent-700;
+  }
+
+  .btn-outline {
+    @apply border border-[hsl(var(--input))] bg-background hover:bg-muted hover:text-accent-500;
+  }
+
+  .input {
+    @apply flex h-10 w-full rounded-md border border-[hsl(var(--input))] bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .badge-primary {
+    @apply bg-primary-600 text-primary-50;
+  }
+
+  .badge-secondary {
+    @apply bg-accent-600 text-accent-50;
+  }
+
+  .badge-success {
+    @apply bg-success-600 text-success-50;
+  }
+
+  .badge-warning {
+    @apply bg-warning-600 text-warning-50;
+  }
+
+  .badge-error {
+    @apply bg-error-600 text-error-50;
+  }
+}
