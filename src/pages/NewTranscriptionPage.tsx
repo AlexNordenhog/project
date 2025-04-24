@@ -143,7 +143,7 @@ const NewTranscriptionPage: React.FC = () => {
           </Button>
           <div>
             <h1 className="text-2xl font-bold tracking-tight">
-              New Transcription
+              Ny Transkription
             </h1>
             <p className="text-muted-foreground">
               Skapa en ny transkription för en patient
@@ -171,10 +171,16 @@ const NewTranscriptionPage: React.FC = () => {
           </Button>
           <Button
             onClick={handleSave}
-            disabled={!patientId || !content || saving}
+            disabled={saving}
+            className={
+              !patientId || !content ? "opacity-50 cursor-not-allowed" : ""
+            }
           >
             <Save className="h-4 w-4 mr-2" />
-            {saving ? "Saving..." : "Save Draft"}
+            {saving ? "Saving..." : "Spara Draft"}
+          </Button>
+          <Button variant="success" className="bg-green-600 hover:bg-green-700">
+            Skicka till Journal
           </Button>
         </div>
       </motion.div>

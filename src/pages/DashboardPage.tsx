@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import PatientSummary from "../components/dashboard/PatientSummary";
 import TranscriptionSummary from "../components/dashboard/TranscriptionSummary";
 import AppointmentsSummary from "../components/dashboard/AppointmentsSummary";
@@ -8,12 +9,17 @@ import { useAuthStore } from "../store/authStore";
 
 const DashboardPage: React.FC = () => {
   const { user } = useAuthStore();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const getGreeting = () => {
     const hour = new Date().getHours();
-    if (hour < 12) return "Good morning";
-    if (hour < 18) return "Good afternoon";
-    return "Good evening";
+    if (hour < 12) return "Good morgon";
+    if (hour < 18) return "God eftermiddag";
+    return "God kväll";
+  };
+
+  const handleStartMeeting = () => {
+    navigate("/transcriptions/new"); // Redirect to /transcriptions/new
   };
 
   return (
@@ -33,7 +39,7 @@ const DashboardPage: React.FC = () => {
           transition={{ duration: 0.3, delay: 0.1 }}
           className="text-muted-foreground"
         >
-          Here's what's happening with your patient records today.
+          Här är vad som händer med dina patientjournaler idag.
         </motion.p>
       </div>
 
@@ -50,6 +56,7 @@ const DashboardPage: React.FC = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             className="bg-primary-600 text-white rounded-lg p-6 text-center shadow-md transition-all"
+            onClick={handleStartMeeting} // Add onClick handler
           >
             <h3 className="text-lg font-medium">Starta Möte</h3>
             <p className="text-primary-100 text-sm mt-1">

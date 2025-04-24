@@ -95,7 +95,7 @@ const TranscriptionsPage: React.FC = () => {
         >
           <Button onClick={handleCreateNew}>
             <FilePlus className="mr-2 h-4 w-4" />
-            New Transcription
+            Ny Transkription
           </Button>
         </motion.div>
       </div>
@@ -122,7 +122,7 @@ const TranscriptionsPage: React.FC = () => {
           <div className="relative w-full md:w-64">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search transcriptions..."
+              placeholder="Sök transkriptioner..."
               className="pl-8"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

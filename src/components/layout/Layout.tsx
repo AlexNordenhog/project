@@ -33,8 +33,8 @@ const Layout: React.FC = () => {
     const path = location.pathname;
 
     if (path === "/") return "Översikt";
-    if (path.startsWith("/patients")) return "Patient Records";
-    if (path.startsWith("/appointments")) return "Appointments";
+    if (path.startsWith("/patients")) return "Patientent Sida";
+    if (path.startsWith("/appointments")) return "Möten";
     if (path.startsWith("/transcriptions")) return "Transkriptioner";
     if (path.startsWith("/search")) return "Sök";
     if (path.startsWith("/settings")) return "Inställningar";

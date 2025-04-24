@@ -21,14 +21,14 @@ const mockTranscriptions: Transcription[] = [
     doctorId: '1',
     doctorName: 'Dr. Jane Smith',
     date: '2023-04-15',
-    content: `Patient presents with recurring headaches, primarily in the frontal region. She describes the pain as "throbbing" and rates it 7/10 at its worst. Symptoms have been present for approximately 2 weeks.
+    content: `Patienten upplever återkommande huvudvärk, främst i den främre delen av huvudet. Hon beskriver smärtan som "pulserande" och graderar den till 7/10 vid värsta tillfället. Symptomen har pågått i cirka 2 veckor.
     
-    Examination reveals no neurological deficits. Vitals are stable. No fever or signs of infection.
+    Undersökning visar inga neurologiska avvikelser. Vitala tecken är stabila. Ingen feber eller tecken på infektion.
     
-    Assessment: Tension headaches, likely exacerbated by reported workplace stress.
+    Bedömning: Spänningshuvudvärk, troligen förvärrad av rapporterad arbetsrelaterad stress.
     
-    Plan: Prescribed ibuprofen 400mg every 6 hours as needed for pain. Recommended stress reduction techniques and adequate hydration. Patient to return in 2 weeks if symptoms persist or worsen. Discussed possible referral to neurology if no improvement.`,
-    tags: ['headache', 'stress', 'pain management'],
+    Plan: Förskrivet ibuprofen 400 mg var 6:e timme vid behov för smärta. Rekommenderade stressreducerande tekniker och tillräcklig vätsketillförsel. Patienten ska återkomma om 2 veckor om symptomen kvarstår eller förvärras. Diskuterade eventuell remiss till neurologi om ingen förbättring sker.`,
+    tags: ['huvudvärk', 'stress', 'smärthantering'],
     status: 'final',
     lastUpdated: '2023-04-15T16:30:00Z',
   },
@@ -40,16 +40,16 @@ const mockTranscriptions: Transcription[] = [
     doctorId: '1',
     doctorName: 'Dr. Jane Smith',
     date: '2023-04-16',
-    content: `Follow-up appointment for Type 2 Diabetes management. Patient reports improved compliance with medication regimen and dietary recommendations.
+    content: `Uppföljningsbesök för hantering av typ 2-diabetes. Patienten rapporterar förbättrad följsamhet till medicinering och kostrekommendationer.
     
-    Blood glucose readings (from patient's log): Fasting - average 130 mg/dL (range 110-145). Post-meal - average 180 mg/dL (range 160-210).
+    Blodsockervärden (från patientens logg): Fastande - genomsnitt 130 mg/dL (intervall 110-145). Efter måltid - genomsnitt 180 mg/dL (intervall 160-210).
     
-    Recent HbA1c: 7.2% (improved from 8.1% 3 months ago)
+    Senaste HbA1c: 7,2 % (förbättrat från 8,1 % för 3 månader sedan)
     
-    Assessment: Improving diabetic control, but not yet at target.
+    Bedömning: Förbättrad diabeteskontroll, men ännu inte på målnivå.
     
-    Plan: Continue current medication. Reinforced importance of consistent carbohydrate counting. Provided additional resources for meal planning. Scheduled next HbA1c test for 3 months. Will consider medication adjustment at next visit if targets not met.`,
-    tags: ['diabetes', 'follow-up', 'medication management'],
+    Plan: Fortsätt med nuvarande medicinering. Förstärkte vikten av konsekvent kolhydraträkning. Tillhandahöll ytterligare resurser för måltidsplanering. Planerade nästa HbA1c-test om 3 månader. Kommer att överväga medicinjustering vid nästa besök om målen inte uppnås.`,
+    tags: ['diabetes', 'uppföljning', 'medicineringshantering'],
     status: 'final',
     lastUpdated: '2023-04-16T14:45:00Z',
   },
@@ -61,18 +61,18 @@ const mockTranscriptions: Transcription[] = [
     doctorId: '1',
     doctorName: 'Dr. Jane Smith',
     date: '2023-04-17',
-    content: `Patient presents for annual physical examination. No specific complaints reported. Generally feeling well.
+    content: `Patienten kommer för årlig hälsokontroll. Inga specifika klagomål rapporterade. Känner sig generellt välmående.
     
-    Review of systems negative for significant issues. Patient reports regular exercise 3x weekly. Non-smoker. Occasional alcohol use (1-2 drinks/week).
+    Genomgång av system visar inga betydande problem. Patienten rapporterar regelbunden träning 3 gånger i veckan. Icke-rökare. Tillfällig alkoholkonsumtion (1-2 drinkar/vecka).
     
-    Vitals: BP 118/76, HR 68, Temp 98.6°F, RR 14, O2 sat 99%.
+    Vitala tecken: Blodtryck 118/76, puls 68, temperatur 98,6°F, andningsfrekvens 14, syremättnad 99 %.
     
-    Physical examination unremarkable. Labs ordered: CBC, CMP, lipid panel, TSH.
+    Fysisk undersökning utan anmärkning. Beställda prover: CBC, CMP, lipidpanel, TSH.
     
-    Assessment: Healthy adult female. Preventive care up-to-date.
+    Bedömning: Frisk vuxen kvinna. Förebyggande vård är uppdaterad.
     
-    Plan: Continue current lifestyle. Review labs when available. Recommended age-appropriate cancer screenings discussed. Flu vaccine administered today.`,
-    tags: ['annual exam', 'preventive care'],
+    Plan: Fortsätt nuvarande livsstil. Granska prover när de är tillgängliga. Rekommenderade åldersanpassade cancerundersökningar diskuterades. Influensavaccin administrerades idag.`,
+    tags: ['årlig undersökning', 'förebyggande vård'],
     status: 'final',
     lastUpdated: '2023-04-17T11:15:00Z',
   },
@@ -84,16 +84,16 @@ const mockTranscriptions: Transcription[] = [
     doctorId: '1',
     doctorName: 'Dr. Jane Smith',
     date: '2023-04-18',
-    content: `Patient presents with increasing knee pain, particularly in right knee. Reports pain is worse with climbing stairs and after prolonged walking. Minimal relief with OTC NSAIDs.
+    content: `Patienten upplever ökande knäsmärta, särskilt i höger knä. Rapporterar att smärtan är värre vid trappklättring och efter långvarig gång. Minimal lindring med receptfria NSAID.
     
-    Examination shows mild swelling of right knee. Range of motion limited by pain. No erythema or increased warmth.
+    Undersökning visar mild svullnad i höger knä. Rörelseomfång begränsat av smärta. Ingen rodnad eller ökad värme.
     
-    X-ray results (from last month): Moderate degenerative changes, osteophyte formation, joint space narrowing consistent with osteoarthritis.
+    Röntgenresultat (från förra månaden): Måttliga degenerativa förändringar, osteofytbildning, minskad ledspringa förenlig med artros.
     
-    Assessment: Osteoarthritis of the right knee with acute exacerbation.
+    Bedömning: Artros i höger knä med akut försämring.
     
-    Plan: Prescribed meloxicam 15mg daily with gastroprotection. Discussed weight management strategies. Referral to physical therapy for strengthening exercises. Consider orthopedic consultation if no improvement in 4-6 weeks.`,
-    tags: ['osteoarthritis', 'pain management', 'knee pain'],
+    Plan: Förskrivet meloxikam 15 mg dagligen med magsskydd. Diskuterade viktminskningsstrategier. Remiss till sjukgymnastik för förstärkningsövningar. Överväg ortopedisk konsultation om ingen förbättring sker inom 4-6 veckor.`,
+    tags: ['artros', 'smärthantering', 'knäsmärta'],
     status: 'draft',
     lastUpdated: '2023-04-18T09:30:00Z',
   },
