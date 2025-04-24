@@ -82,7 +82,7 @@ const TranscriptionsPage: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="text-3xl font-bold tracking-tight">Transkiptioner</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Transkriptioner</h1>
           <p className="text-muted-foreground">
             Hantera och granska dina transkriptioner här.
           </p>
@@ -139,7 +139,7 @@ const TranscriptionsPage: React.FC = () => {
             <CardContent className="py-10 text-center">
               <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-4" />
               <h3 className="text-lg font-medium">
-                Inga transkiptioner hittade
+                Inga transkriptioner hittade
               </h3>
               <p className="text-muted-foreground">
                 {searchTerm

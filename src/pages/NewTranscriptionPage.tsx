@@ -73,7 +73,9 @@ const NewTranscriptionPage: React.FC = () => {
       // Simulate recording by adding placeholder text after a delay
       setTimeout(() => {
         if (content === "") {
-          setContent("Patient presents with symptoms of...");
+          setContent(
+            "Patienten uppvisar symtom på...\n\nPatienten nämner också...\n\nPatienten nämner också..."
+          );
         } else {
           setContent(content + "\n\nPatient also mentions...");
         }
@@ -204,8 +206,23 @@ const NewTranscriptionPage: React.FC = () => {
           <Card className="mt-6">
             <CardContent className="p-6">
               <div className="mb-4">
-                <h2 className="text-lg font-medium">Förslagen Diagnos</h2>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-lg font-medium">Förslagen Diagnos</h2>
+                  <Button
+                    onClick={() =>
+                      ((
+                        document.getElementById(
+                          "diagnosis-textarea"
+                        ) as HTMLTextAreaElement
+                      ).value =
+                        "UlteriaAI föreslår följande diagnos...\n\nDenna diagnos grundas i följande...")
+                    }
+                  >
+                    Generera Diagnos Förslag
+                  </Button>
+                </div>
                 <textarea
+                  id="diagnosis-textarea"
                   className="w-full h-48 p-3 border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500"
                   placeholder="Enter diagnosis proposal..."
                 />
@@ -230,14 +247,14 @@ const NewTranscriptionPage: React.FC = () => {
               <div className="space-y-3">
                 <div>
                   <label className="block text-sm font-medium mb-1">
-                    Select Patient
+                    Välj Patient
                   </label>
                   <select
                     className="w-full border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary-500"
                     value={patientId}
                     onChange={(e) => setPatientId(e.target.value)}
                   >
-                    <option value="">-- Select a patient --</option>
+                    <option value="">-- Välj en patient --</option>
                     {patients.map((patient) => (
                       <option key={patient.id} value={patient.id}>
                         {patient.name}
@@ -287,7 +304,7 @@ const NewTranscriptionPage: React.FC = () => {
             <CardContent className="p-6">
               <div className="flex items-center mb-4">
                 <Calendar className="h-5 w-5 mr-2 text-primary-600" />
-                <h2 className="text-lg font-medium">Date</h2>
+                <h2 className="text-lg font-medium">Datum</h2>
               </div>
 
               <div>
@@ -327,7 +344,7 @@ const NewTranscriptionPage: React.FC = () => {
 
                 <div className="mt-2">
                   <Input
-                    placeholder="Add tag (press Enter)"
+                    placeholder="Lägg till Tagg (Tryck Enter)"
                     value={newTag}
                     onChange={(e) => setNewTag(e.target.value)}
                     onKeyDown={handleAddTag}

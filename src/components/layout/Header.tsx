@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, title }) => {
       </Button>
 
       <div className="flex items-center gap-2 md:ml-0 flex-1">
-        <h1 className="text-xl font-semibold">{title}</h1>
+        <h1 className="text-xl font-semibold pl-[10%]">{title}</h1>
       </div>
 
       <div className="flex items-center gap-4">

@@ -32,10 +32,10 @@ const Layout: React.FC = () => {
   const getTitle = () => {
     const path = location.pathname;
 
-    if (path === "/") return "Dashboard";
+    if (path === "/") return "Översikt";
     if (path.startsWith("/patients")) return "Patient Records";
     if (path.startsWith("/appointments")) return "Appointments";
-    if (path.startsWith("/transcriptions")) return "Transktioner";
+    if (path.startsWith("/transcriptions")) return "Transkriptioner";
     if (path.startsWith("/search")) return "Sök";
     if (path.startsWith("/settings")) return "Inställningar";
 
